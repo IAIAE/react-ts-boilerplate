@@ -4,10 +4,8 @@
   "description": "caron-web",
   "scripts": {
     "start": "cross-env PLATFORM=web webpack-dev-server",
-    "electron": "cross-env PLATFORM=electron webpack-dev-server",
     "tt": "webpack",
     "build": "cross-env PLATFORM=electron webpack -p --config webpack.config.production.js",
-    "postbuild": "copyfiles index.html dist"
   },
   "repository": {
     "type": "git",
