@@ -1,0 +1,28 @@
+.root{
+    .bar{
+        height: 25px;
+        background-color: #efefef;
+        border-bottom: 1px solid #aaa;
+        .closebtn{
+            margin-right: 8px;
+            margin-top: 3px;
+            float: right;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            background-image: url('assets/images/close.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .title{
+            font-size: 16px;
+            float: left;
+            line-height: 25px;
+            margin-left: 15px;
+        }
+    }
+    .container{
+        padding: 8px 8px 12px 8px;
+        overflow: hidden;
+    }
+}

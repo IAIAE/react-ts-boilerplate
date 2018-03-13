@@ -1,0 +1,16 @@
+.root{
+    padding: 4px 10px;
+    display: flex;
+    justify-content: space-between;
+    .label{
+        align-self: center;
+        flex-shrink: 1;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+    .container{
+        overflow: hidden;
+        padding: 5px;
+        flex: 1;
+    }
+}

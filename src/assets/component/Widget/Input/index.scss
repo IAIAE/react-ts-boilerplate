@@ -1,0 +1,21 @@
+.root{
+    flex: 1;
+    display: flex;
+    margin: 5px auto;
+    .label{
+        min-width: 100px;
+        line-height: 30px; 
+        text-align: left;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .box{
+        border: 1px solid #aaa;
+        padding: 5px;
+        flex: 1;
+        display: inline-block;
+        font-size: 18px;
+        border-radius: 4px;
+    }
+}

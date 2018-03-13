@@ -1,0 +1,21 @@
+.root{
+    width: 400px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 0 #aaa;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 160px);
+    overflow: hidden;
+    .btn{
+        float: right;
+    }
+    .text{
+        font-size: 16px;
+        text-align: left;
+        padding: 10px;
+        text-indent: 2em;
+        height: 30px;
+        margin-top: 20px;
+    }
+}
