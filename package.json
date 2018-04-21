@@ -5,7 +5,7 @@
   "scripts": {
     "start": "cross-env PLATFORM=web webpack-dev-server",
     "tt": "webpack",
-    "build": "cross-env PLATFORM=electron webpack -p --config webpack.config.production.js",
+    "build": "cross-env PLATFORM=electron webpack -p --config webpack.config.production.js"
   },
   "repository": {
     "type": "git",
