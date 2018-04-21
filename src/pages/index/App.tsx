@@ -10,8 +10,9 @@ import {bindDefaultKeyboard, unBindDefaultKeyboard} from 'utils/tool/keyboard'
 import { inject, observer } from 'mobx-react';
 import {Props as UIProps} from './data/ui'
 
-import Hello from './component/Hello'
 import Home from './component/Home'
+import Section2 from './component/Section2'
+import NotFound from './component/NotFound'
 
 /**
  * 组件
@@ -39,8 +40,8 @@ export default class pageComponent extends Component<Props, any> {
                 <Router history={this.props.history}>
                     <Switch>
                         <Route exact path={RouterPath.HOME} component={Home}/>
-                        <Route exact path={RouterPath.HELLO} component={Hello}/>
-                        <Route path='*' exact component={Home} />
+                        <Route exact path={RouterPath.SECTION2} component={Section2}/>
+                        <Route path='*' exact component={NotFound} />
                     </Switch>
                 </Router>
             </div>

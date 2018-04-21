@@ -6,4 +6,11 @@
     color: #aaa;
     font-weight: 100;
     margin-top: 30px;
+    .item{
+        cursor: pointer;
+        &:hover{
+            background-color: #6BE1A7;
+            color: white;
+        }
+    }
 }
