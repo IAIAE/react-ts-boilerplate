@@ -14,6 +14,7 @@ import Home from './component/Home'
 import Section2 from './component/Section2'
 import NotFound from './component/NotFound'
 import Section3 from './component/Section3'
+import Section4 from './component/Section4'
 
 /**
  * 组件
@@ -43,6 +44,7 @@ export default class pageComponent extends Component<Props, any> {
                         <Route exact path={RouterPath.HOME} component={Home}/>
                         <Route exact path={RouterPath.SECTION2} component={Section2}/>
                         <Route exact path={RouterPath.SECTION3} component={Section3}/>
+                        <Route exact path={RouterPath.SECTION4} component={Section4}/>
                         <Route path='*' exact component={NotFound} />
                     </Switch>
                 </Router>
