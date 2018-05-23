@@ -2,7 +2,8 @@ import React from 'react'
 import {observer, inject} from 'mobx-react'
 import {RouterPath} from '../../router'
 import EllipsisText from 'assets/component/Widget/EllipsisText'
-import OneCase from './OneCase'
+import OneCase from './TwoCase'
+import TwoCase from './TwoCase'
 
 export interface Props{
     history?: any;  
@@ -20,16 +21,13 @@ export default class Section2 extends React.Component<Props, any>{
         return <div className={style.root}>
             <div className="tohome" onClick={this.toHome}>{'<'} 返回home</div>
             <div className="case">
-                <div className={style.logo}>logo</div>
-                <div className={style.name}>我这么爱你你却牵着别人的手在公园里溜达我一拳怼死你</div>
-            </div>
-            <div className="case">
-                <div className={style.logo}>logo</div>
-                <EllipsisText className={style.name}>我这么爱你你却牵着别人的手在公园里溜达我一拳怼死你</EllipsisText>
-            </div>
-            <div className="case">
+                <div>没有添加样式的按钮：</div>
                 <OneCase />
-            </div>
+            </div> 
+            <div className="case">
+                <div>添加样式的之后：</div>
+                <OneCase />
+            </div> 
         </div>
     }
 }

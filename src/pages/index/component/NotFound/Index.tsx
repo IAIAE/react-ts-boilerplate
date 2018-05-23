@@ -18,6 +18,7 @@ export default class NotFound extends React.Component<Props, any>{
     toHome(e){
         this.props.history.push(RouterPath.HOME)
     }
+    
     render(){
         return <div className={style.root}>
             404 not found.

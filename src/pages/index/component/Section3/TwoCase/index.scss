@@ -1,0 +1,17 @@
+.btn{
+    display: inline-block;
+    width:100px;
+    height: 40px;
+    background-color: #67D79F;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 5px 1px 0 #5CBDB1;
+    border-radius: 6px;
+    &:active{
+        box-shadow: none;
+        background-color: #5CBDB1;
+        transform: translateY(5px);
+    }
+}
