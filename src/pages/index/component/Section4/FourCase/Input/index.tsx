@@ -7,10 +7,15 @@ class Input extends React.Component<any, any>{
             text: props.inputText
         }
     }
+    setValue(text){
+        this.setState({
+            text,
+        })
+    }
     handleChange = (e) => {
-        // this.setState({
-        //     text: e.target.value
-        // })
+        this.setState({
+            text: e.target.value
+        })
         this.props.onChange && this.props.onChange(e.target.value)
     }
     static getDerivedStateFromProps(nextProps, prevState){

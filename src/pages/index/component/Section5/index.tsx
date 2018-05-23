@@ -3,8 +3,7 @@ import {observer, inject} from 'mobx-react'
 import {RouterPath} from '../../router'
 import OneCase from './OneCase'
 import TwoCase from './TwoCase'
-import ThreeCase from './ThreeCase'
-import FourCase from './FourCase'
+
 
 export interface Props{
     history?: any;  
@@ -35,12 +34,6 @@ export default class Section2 extends React.Component<Props, any>{
             </div>
             <div className="case">
                 <TwoCase /> 
-            </div>
-            <div className="case">
-                <ThreeCase /> 
-            </div>
-            <div className="case">
-                <FourCase /> 
             </div>
         </div>
     }

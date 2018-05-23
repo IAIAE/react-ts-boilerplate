@@ -11,19 +11,20 @@ export default class Case extends React.Component<any, any>{
         }
     }
     handleClick = (e) => {
-        this.setState({inputText: 'hello', buttonText: '点击我'}) 
+        // @ts-ignore
+        this.refs.input.setValue('hello')
+        // @ts-ignore
+        this.refs.btn.setValue('点击我')
     }
     inputChange = (text) => {
-        this.setState({
-            buttonText: text,
-            inputText: text,
-        })
+        // @ts-ignore
+        this.refs.btn.setValue(text)
     }
     render(){
         return <div>
             <p>现在加入组件通信：方法2，所有方法都交给父组件监听，父组件通过refs调用子组件修改子组件的状态：</p>
-            <Input inputText={this.state.inputText} onChange={this.inputChange}/>
-            <Button text={this.state.buttonText} handleCick={this.handleClick}/>
+            <Input inputText={'hello'} ref="input" onChange={this.inputChange}/>
+            <Button ref="btn" text={'点击我'} handleCick={this.handleClick}/>
         </div>
     }
 }
