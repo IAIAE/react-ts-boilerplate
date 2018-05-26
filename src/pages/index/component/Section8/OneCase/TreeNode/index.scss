@@ -1,0 +1,40 @@
+.root{
+    overflow: hidden;
+    width: 100%;
+    .infoContainer{
+        overflow: hidden;
+        display: flex;
+        justify-items: center;
+        justify-content: flex-start;
+        .logo{
+            width: 30px;
+            background-image: url(../../img/file.png);
+            background-size: cover;
+            height: 30px;
+            &.open{
+                background-image: url(../../img/file-open.png);
+            }
+        }
+        .leaf{
+            width: 30px;
+            height: 30px;
+            background-image: url(../../img/leaf.png);
+            background-size: cover;
+        }
+        .name{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            flex: 1;
+            font-size: 18px;
+            line-height: 30px;
+            height: 30px;
+            margin-left: 10px;
+        }
+    }
+    .childrenContainer{
+        margin-left: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+}
