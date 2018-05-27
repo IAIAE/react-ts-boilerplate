@@ -1,16 +1,5 @@
-interface doReport {
-  (config: object, isImmediate?: boolean): void;
-}
-interface AVReport {
-  doReport: doReport
-}
-
 interface anyObject {
   [propName: string]: any;
-}
-interface _report_ {
-  opts?: anyObject,
-  [otherProp: string]: any;
 }
 
 /**

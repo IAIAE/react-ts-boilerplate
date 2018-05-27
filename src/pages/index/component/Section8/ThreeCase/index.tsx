@@ -1,29 +1,49 @@
 import React from 'react'
-import Input from './Input'
-import Button from './Button'
+import Tree from './Tree'
+const style = require('./index.scss')
 
 export default class Case extends React.Component<any, any>{
-    constructor(props){
-        super(props)
-        this.state = {
-            inputText: 'hello',
-            buttonText: '点击我',
-        }
+    state = {
+        root: [{
+            name: '人物',
+            children: [{
+                name: 'me.png'
+            }]
+        },{
+            name: '风景',
+            children: [ {
+                name: '翡冷翠.png',
+            }, {
+                name: '历史',
+                children: [{
+                    name: '科隆大教堂.png'
+                }, {
+                    name: '鲁昂大教堂.png'
+                }]
+            }, {
+                name: '巨人之舌.png'
+            }]
+        }]
     }
-    handleClick = (e) => {
-        this.setState({inputText: 'hello', buttonText: '点击我'}) 
-    }
-    inputChange = (text) => {
-        this.setState({
-            buttonText: text,
-            inputText: text,
+    handleChange = (path, newValue) => {
+        this.setState(state=>{
+            let _path = path.split('-')
+            let node = _path.reduce((seed, current)=>{
+                return seed.children[current]
+            }, {children: state.root})
+            let newRoot = state.root
+            node.name = newValue;
+            return {
+                root: newRoot,
+            }
         })
+
+        // console.info(path, newValue)
     }
     render(){
         return <div>
-            <p>现在加入组件通信：方法1，所有状态都交给父组件统一管理，父组件通过props下发数据状态</p>
-            <Input inputText={this.state.inputText} onChange={this.inputChange}/>
-            <Button text={this.state.buttonText} handleCick={this.handleClick}/>
+            <div>当props没有改变时，组件无法重绘。这是可变数据结构的缺点。</div>
+            <Tree change={this.handleChange} root={this.state.root}/>
         </div>
     }
 }

@@ -8,7 +8,7 @@ export default class Button extends React.Component<any, any>{
             text: props.text
         }
     }
-    setValue(text){
+    setText(text){
         this.setState({
             text,
         })

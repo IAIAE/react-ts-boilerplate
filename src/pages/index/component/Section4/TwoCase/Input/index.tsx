@@ -12,11 +12,6 @@ class Input extends React.Component<any, any>{
             text: e.target.value
         })
     }
-    static getDerivedStateFromProps(nextProps, prevState){
-        return {
-            text: nextProps.inputText
-        }
-    }
     render() {
         return <div>
             <input value={this.state.text} onChange={this.handleChange} />

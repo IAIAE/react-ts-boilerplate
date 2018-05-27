@@ -1,30 +1,25 @@
 import React from 'react'
-import Input from './Input'
-import Button from './Button'
+import Tree from './Tree'
+const style = require('./index.scss')
+import {observer, inject, Provider} from 'mobx-react'
+import data from './data'
 
-export default class Case extends React.Component<any, any>{
-    constructor(props){
-        super(props)
-        this.state = {
-            inputText: 'hello',
-            buttonText: '点击我',
-        }
-    }
-    handleClick = (e) => {
-        // @ts-ignore
-        this.refs.input.setValue('hello')
-        // @ts-ignore
-        this.refs.btn.setValue('点击我')
-    }
-    inputChange = (text) => {
-        // @ts-ignore
-        this.refs.btn.setValue(text)
-    }
+@inject('tree')
+@observer
+class Case extends React.Component<any, any>{
     render(){
+        console.info('this.props.tree', this.props.tree)
         return <div>
-            <p>现在加入组件通信：方法2，所有方法都交给父组件监听，父组件通过refs调用子组件修改子组件的状态：</p>
-            <Input inputText={'hello'} ref="input" onChange={this.inputChange}/>
-            <Button ref="btn" text={'点击我'} handleCick={this.handleClick}/>
+            <div>使用MST来实现不可变数据结构。达到相同功能，而代码质量明显提升</div>
+            <Tree root={this.props.tree.roots}/>
         </div>
+    }
+}
+
+export default class Foo extends React.Component{
+    render(){
+        return <Provider tree={data}>
+            <Case />
+        </Provider>
     }
 }

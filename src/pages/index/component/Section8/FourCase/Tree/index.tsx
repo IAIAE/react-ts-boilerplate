@@ -1,7 +1,9 @@
 import React from 'react'
 const style = require('./index.scss');
 import TreeNode from '../TreeNode'
+import {observer, inject} from 'mobx-react'
 
+@observer
 export default class Tree extends React.Component<any, any>{
     constructor(props) {
         super(props)
@@ -12,7 +14,7 @@ export default class Tree extends React.Component<any, any>{
     render() {
         let { root } = this.props
         return <div className={style.root}>
-            {root && root.map((node, index) => <TreeNode path="" index={index} change={this.props.change} node={node} key={index} />)}
+            {root && root.map((node, index) => <TreeNode node={node} key={index} />)}
         </div>
     }
 }

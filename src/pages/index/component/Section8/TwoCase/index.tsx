@@ -42,7 +42,7 @@ export default class Case extends React.Component<any, any>{
     }
     render(){
         return <div>
-            <div>用input框使得每一个节点可以编辑，但是引入了一个问题，如何使得修改的节点单独渲染，而不重绘整个树结构组件？</div>
+            <div>可以编辑的节点：用input框使得每一个节点可以编辑，但是引入了一个问题，如何使得修改的节点单独渲染，而不重绘整个树结构组件？</div>
             <Tree change={this.handleChange} root={this.state.root}/>
         </div>
     }
