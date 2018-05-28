@@ -1,0 +1,39 @@
+.root{
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    width: 300px;
+    min-height: 20px;
+    .item{
+        height: 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin: 4px;
+        .logo{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin-left: 10px;
+            background-color: #aaa;
+        }
+        .name{
+            flex: 1;
+            padding-left: 10px;
+            text-align: left;
+            line-height: 20px;
+            height: 20px;   
+            font-size: 16px;
+        }
+
+        .score{
+            width: 50px;
+            height: 20px;
+            font-size: 16px;
+            padding-right: 10px;
+            text-align: right;
+            line-height: 20px;
+        }
+    }
+}
