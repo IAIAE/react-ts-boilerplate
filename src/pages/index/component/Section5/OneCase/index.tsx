@@ -1,5 +1,5 @@
 import React from 'react'
-import { Provider, connect } from 'react-redux'
+import { Provider, connect} from 'react-redux'
 import { createStore, combineReducers } from 'redux'
 import Input from './Input'
 import Button from './Button'

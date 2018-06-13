@@ -16,7 +16,7 @@ import NotFound from './component/NotFound'
 import Section3 from './component/Section3'
 import Section4 from './component/Section4'
 import Section5 from './component/Section5'
-import Section8 from './component/Section8'
+import Section9 from './component/Section9'
 import Section6 from './component/Section6'
 
 /**
@@ -50,7 +50,7 @@ export default class pageComponent extends Component<Props, any> {
                         <Route exact path={RouterPath.SECTION4} component={Section4}/>
                         <Route exact path={RouterPath.SECTION5} component={Section5}/>
                         <Route exact path={RouterPath.SECTION6} component={Section6}/>
-                        <Route exact path={RouterPath.SECTION8} component={Section8}/>
+                        <Route exact path={RouterPath.SECTION9} component={Section9}/>
 
                         <Route path='*' exact component={NotFound} />
                     </Switch>
