@@ -4,7 +4,8 @@ import { clickBehavior, constClickInterval, cbClick } from 'utils/decorator/clic
 import {Router, Route, Link, Redirect, Switch} from 'react-router-dom'
 import {RouterPath} from './router'
 import {bindDefaultKeyboard, unBindDefaultKeyboard} from 'utils/tool/keyboard'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import {checkStatus} from '/assets/utils/sugar'
 // import Tree from './data/Tree'
 import { inject, observer } from 'mobx-react';
@@ -18,6 +19,7 @@ import Section4 from './component/Section4'
 import Section5 from './component/Section5'
 import Section9 from './component/Section9'
 import Section6 from './component/Section6'
+import Section7 from './component/Section7'
 
 /**
  * 组件
@@ -40,6 +42,7 @@ export default class pageComponent extends Component<Props, any> {
 
     render() {
         return <div className={style.rootroot}>
+            <ToastContainer />
             {this.props.ui.mask.show && <Mask component={this.props.ui.mask.component} data={this.props.ui.mask.params}/>}
             <div className={style.mainPanel}>
                 <Router history={this.props.history}>
@@ -50,6 +53,7 @@ export default class pageComponent extends Component<Props, any> {
                         <Route exact path={RouterPath.SECTION4} component={Section4}/>
                         <Route exact path={RouterPath.SECTION5} component={Section5}/>
                         <Route exact path={RouterPath.SECTION6} component={Section6}/>
+                        <Route exact path={RouterPath.SECTION7} component={Section7}/>
                         <Route exact path={RouterPath.SECTION9} component={Section9}/>
 
                         <Route path='*' exact component={NotFound} />
